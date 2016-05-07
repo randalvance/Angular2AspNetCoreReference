@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="~/scripts/npm/es6-shim/es6-shim.min.js"></script>
+
+    <script src="~/scripts/npm/zone.js/dist/zone.js"></script>
+    <script src="~/scripts/npm/reflect-metadata/Reflect.js"></script>
+    <script src="~/scripts/npm/systemjs/system.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script src="~/systemjs.config.js"></script>
+
+    <script>
+        System.import('app').catch(function (err) { alert.error(err); });
+    </script>
+
+</head>
+<!-- 3. Display the application -->
+<body>
+    @RenderBody()
+</body>
+</html>
