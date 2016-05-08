@@ -8,17 +8,15 @@
 
     <!-- 1. Load libraries -->
     <!-- Polyfill(s) for older browsers -->
-    <script src="~/scripts/npm/es6-shim/es6-shim.min.js"></script>
-
-    <script src="~/scripts/npm/zone.js/dist/zone.js"></script>
-    <script src="~/scripts/npm/reflect-metadata/Reflect.js"></script>
-    <script src="~/scripts/npm/systemjs/system.js"></script>
+    <script src="~/jspm_packages/github/es-shims/es6-shim@0.35.0/es6-shim.js"></script>
+    <script src="~/jspm_packages/npm/zone.js@0.6.12/lib/zone.js"></script>
+    <script src="~/jspm_packages/system.js"></script>
 
     <!-- 2. Configure SystemJS -->
-    <script src="~/systemjs.config.js"></script>
+    <script src="~/jspm.config.js"></script>
 
     <script>
-        System.import('app').catch(function (err) { alert.error(err); });
+        System.import('app').catch(function (err) { console.error(err); });
     </script>
 
 </head>
