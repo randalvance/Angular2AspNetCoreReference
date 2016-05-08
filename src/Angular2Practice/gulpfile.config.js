@@ -4,21 +4,19 @@ var GulpConfig = (function () {
     function gulpConfig() {
         this.paths = {};
         this.paths.web = { root: "./wwwroot" };
-        this.paths.web.app = this.paths.web.root + "/app";
-        this.paths.web.npm = this.paths.web.scripts + "/npm";
-        this.paths.web.styles = this.paths.web.root + "/styles";
 
         this.paths.src = {
             npm: "./node_modules",
+            bower: "./bower_components",
             app: "./app",
-            css: "./Styles"
+            css: "./styles"
         };
 
         this.paths.dest = {
-                npm: this.paths.web.npm,
-                app: this.paths.web.app,
-                css: this.paths.web.styles
-            };
+            app: this.paths.web.root + "/app",
+            lib: this.paths.web.root + "/lib",
+            css: this.paths.web.root + "/styles"
+        };
     }
     return gulpConfig;
 })();

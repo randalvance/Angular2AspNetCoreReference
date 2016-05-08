@@ -3,11 +3,12 @@
 ################################################################################
 
 /src/Angular2Practice/node_modules
+/src/Angular2Practice/bower_components
 /src/Angular2Practice/typings
 /src/Angular2Practice/app/**/*.js
 /src/Angular2Practice/wwwroot/app
+/src/Angular2Practice/wwwroot/lib
 /src/Angular2Practice/wwwroot/jspm_packages
-/src/Angular2Practice/wwwroot/tsconfig.json
 
 
 ## Ignore Visual Studio temporary files, build results, and
