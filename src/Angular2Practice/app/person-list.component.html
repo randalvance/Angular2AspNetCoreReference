@@ -1,0 +1,7 @@
+﻿<ul>
+	<li *ngFor="let person of persons" (click)="select(person)" [class.mdl-color-text--deep-orange-800]="selectedID == person.Id">
+		{{person.Name}}
+	</li>
+</ul>
+
+<person-detail *ngIf="selectedPerson" [person]="selectedPerson"></person-detail>

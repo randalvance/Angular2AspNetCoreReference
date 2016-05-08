@@ -2,6 +2,10 @@ System.config({
   baseURL: "/",
   defaultJSExtensions: true,
   transpiler: "typescript",
+  typescriptOptions: {
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true
+  },
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
@@ -15,14 +19,16 @@ System.config({
   },
 
   map: {
-    "@angular/compiler@2.0.0-rc.1": "npm:@angular/compiler@2.0.0-rc.1",
+    "@angular/compiler": "npm:@angular/compiler@2.0.0-rc.1",
     "@angular/core": "npm:@angular/core@2.0.0-rc.1",
-    "@angular/http@2.0.0-rc.1": "npm:@angular/http@2.0.0-rc.1",
+    "@angular/http": "npm:@angular/http@2.0.0-rc.1",
+    "@angular/platform-browser": "npm:@angular/platform-browser@2.0.0-rc.1",
     "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@2.0.0-rc.1",
-    "@angular/platform-browser@2.0.0-rc.1": "npm:@angular/platform-browser@2.0.0-rc.1",
-    "@angular/router@2.0.0-rc.1": "npm:@angular/router@2.0.0-rc.1",
+    "@angular/router": "npm:@angular/router@2.0.0-rc.1",
     "crypto": "github:jspm/nodelibs-crypto@0.1.0",
+    "http": "npm:@angular/http@2.0.0-rc.1",
     "reflect-metadata": "npm:reflect-metadata@0.1.3",
+    "router": "npm:@angular/router@2.0.0-rc.1",
     "rxjs": "npm:rxjs@5.0.0-beta.6",
     "typescript": "npm:typescript@1.8.10",
     "github:jspm/nodelibs-assert@0.1.0": {

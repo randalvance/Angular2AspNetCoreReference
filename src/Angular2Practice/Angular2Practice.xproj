@@ -34,7 +34,6 @@
   <ItemGroup>
     <DnxInvisibleContent Include="bower.json" />
     <DnxInvisibleContent Include=".bowerrc" />
-    <DnxInvisibleContent Include="package.json" />
   </ItemGroup>
   <ItemGroup>
     <DnxInvisibleFolder Include="bower_components\" />
@@ -42,6 +41,7 @@
     <DnxInvisibleFolder Include="wwwroot\app\" />
     <DnxInvisibleFolder Include="wwwroot\jspm_packages\" />
     <DnxInvisibleFolder Include="wwwroot\lib\" />
+    <DnxInvisibleFolder Include="wwwroot\styles\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>
