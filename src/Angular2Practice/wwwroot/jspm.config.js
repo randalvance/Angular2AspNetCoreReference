@@ -3,8 +3,8 @@ System.config({
   defaultJSExtensions: true,
   transpiler: "typescript",
   typescriptOptions: {
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
   paths: {
     "github:*": "jspm_packages/github/*",
