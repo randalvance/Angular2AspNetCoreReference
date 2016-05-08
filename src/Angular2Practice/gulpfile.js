@@ -1,14 +1,13 @@
 ﻿var gulp = require('gulp');
 var del = require('del');
 var runSequence = require("run-sequence");
-var vinylPaths = require('vinyl-paths');
 
 var Config = new (require("./gulpfile.config"))();
 
-gulp.task("clean", function () {
-    return gulp.src([Config.paths.dest.app, Config.paths.dest.css, Config.paths.dest.lib]).pipe(vinylPaths(del));
-});
 
+gulp.task("clean", function () {
+    return del([Config.paths.dest.app + '/**/*', Config.paths.dest.lib + '/**/*']);
+});
 
 gulp.task('app', function () {
 
