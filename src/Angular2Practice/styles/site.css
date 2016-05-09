@@ -1,5 +1,7 @@
-﻿.main-content {
-    border-radius: 2px;
-    padding: 80px 56px;
-    margin-bottom: 80px;
+﻿body {
+  padding-top: 5rem;
+}
+
+.main-content  {
+  padding: 3rem 1.5rem;
 }

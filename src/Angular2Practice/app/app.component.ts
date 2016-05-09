@@ -1,23 +1,23 @@
 ﻿import { Component, ViewChild } from '@angular/core';
 import { HTTP_PROVIDERS } from '@angular/http';
-import { PersonListComponent } from './person-list.component';
-import Person from './person';
+import { ROUTER_PROVIDERS, ROUTER_DIRECTIVES, Routes } from '@angular/router';
+
+import { WelcomeComponent } from './welcome.component';
+import { Customer, CustomerService, CustomerComponent, CustomerListComponent } from './customer/index';
+import { Product, ProductService, ProductComponent, ProductListComponent } from './product/index';
 
 @Component({
     selector: 'my-app',
     templateUrl: './app/app.component.html',
-    directives: [PersonListComponent],
-    providers: [HTTP_PROVIDERS]
+    directives: [ROUTER_DIRECTIVES],
+    providers: [HTTP_PROVIDERS, ROUTER_PROVIDERS, CustomerService, ProductService]
 })
+@Routes([
+    { path: '/', component: WelcomeComponent },
+    { path: '/customers', component: CustomerListComponent },
+    { path: '/customer/:id', component: CustomerComponent },
+    { path: '/products', component: ProductListComponent },
+    { path: '/product/:id', component: ProductComponent }
+])
 export class AppComponent {
-    firstName: string = "Foo";
-    lastName: string = "Bar";
-
-    @ViewChild(PersonListComponent) personListComponent: PersonListComponent;
-
-    triggerChangeEvent(changedPerson: Person) {
-        if (changedPerson) {
-            this.personListComponent.highlightPerson(changedPerson);
-        }
-    }
 }

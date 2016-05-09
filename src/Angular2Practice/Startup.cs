@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Builder;
+﻿using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
-using Microsoft.AspNet.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json.Serialization;
 
 namespace Angular2Practice
 {
@@ -13,7 +9,11 @@ namespace Angular2Practice
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc().AddJsonOptions(options =>
+            {
+                // make json property names camelCase
+                options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            });
         }
 
         public void Configure(IApplicationBuilder app)

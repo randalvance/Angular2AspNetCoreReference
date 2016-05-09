@@ -1,0 +1,8 @@
+﻿<h3>Customers</h3>
+<ul>
+	<li *ngFor="let customer of customers | async" (click)="select(customer)" [class.mdl-color-text--deep-orange-800]="selectedID == customer.id">
+		{{customer.firstName}} {{customer.lastName}}
+	</li>
+</ul>
+
+<customer-detail *ngIf="selectedCustomer" [customer]="selectedCustomer"></customer-detail>

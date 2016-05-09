@@ -1,0 +1,31 @@
+﻿using Angular2Practice.Models;
+using Microsoft.AspNet.Mvc;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Angular2Practice.Controllers
+{
+    [Route("api/[controller]")]
+    public class ProductController : Controller
+    {
+        private IEnumerable<Product> products = new List<Product>
+            {
+                new Product { Id = 1, Name = "Zap!", Description = "Restore Surfaces Like a Professional", Stock = 10 },
+                new Product { Id = 2, Name = "Rodent Sheriff", Description = "Natural Way to Repel Pests", Stock = 5 },
+                new Product { Id = 3, Name = "Magic Mesh", Description = "Magnetic Screen Door Cover", Stock = 1 }
+            };
+
+        [HttpGet]
+        public IEnumerable<Product> Get()
+        {
+            return products;
+        }
+
+        [HttpGet("{id}")]
+        public Product Get(int id)
+        {
+            return this.products.FirstOrDefault(x => x.Id == id);
+        }
+    }
+}
