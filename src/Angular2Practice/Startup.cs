@@ -20,9 +20,16 @@ namespace Angular2Practice
         {
             app.UseIISPlatformHandler();
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+
+                routes.MapSpaFallbackRoute("spa-fallback", new { controller = "Home", action = "Index" });
+            });
         }
-        
+
         public static void Main(string[] args) => WebApplication.Run<Startup>(args);
     }
 }

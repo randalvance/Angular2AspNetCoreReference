@@ -1,13 +1,14 @@
-﻿import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { Product } from './product';
-import 'rxjs/add/operator/map';
+﻿import { Injectable, Inject } from "@angular/core";
+import { Http, Response } from "@angular/http";
+import { Product } from "./product";
+import "rxjs/add/operator/map";
 
 @Injectable()
 export class ProductService {
-    private serviceUrl: string = 'api/product';
+    private serviceUrl: string = "api/product";
 
-    constructor(private http: Http) { }
+    // Once Visual Studio support for Typescript improves, we will remove the @Inject
+    constructor(@Inject(Http) private http: any) { }
 
     getProducts() {
         return this.http.get(this.serviceUrl).map((response: Response) => <Product[]>response.json());
