@@ -16,7 +16,6 @@
     <TypeScriptCompileBlocked>True</TypeScriptCompileBlocked>
   </PropertyGroup>
   <ItemGroup>
-    <DnxInvisibleContent Include="bower.json" />
     <DnxInvisibleContent Include=".bowerrc" />
   </ItemGroup>
   <ItemGroup>

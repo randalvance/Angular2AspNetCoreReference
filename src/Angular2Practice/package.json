@@ -2,14 +2,6 @@
   "name": "angular-2-practice",
   "version": "1.0.0",
   "description": "",
-  "scripts": {
-    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
-    "lite": "lite-server",
-    "postinstall": "typings install",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "typings": "typings"
-  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
