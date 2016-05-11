@@ -7,7 +7,6 @@ var GulpConfig = (function () {
 
         this.paths.src = {
             npm: "./node_modules",
-            bower: "./bower_components",
             app: "./app",
             css: "./styles"
         };

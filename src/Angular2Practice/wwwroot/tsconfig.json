@@ -4,13 +4,11 @@
     "module": "system",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "sourceMap": true
   },
   "exclude": [
-    "wwwroot",
-    "node_modules",
-    "bower_components",
-    "typings"
+    "jspm_packages"
   ],
   "compileOnSave": false
 }

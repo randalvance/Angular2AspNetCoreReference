@@ -1,11 +1,7 @@
 System.config({
   baseURL: "/",
   defaultJSExtensions: true,
-  transpiler: "typescript",
-  typescriptOptions: {
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
-  },
+  transpiler: "babel",
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
@@ -14,7 +10,7 @@ System.config({
   packages: {
     "app": {
       "main": "main",
-      "defaultExtension": "ts"
+      "defaultExtension": "js"
     }
   },
 
@@ -26,11 +22,13 @@ System.config({
     "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@2.0.0-rc.1",
     "@angular/router": "npm:@angular/router@2.0.0-rc.1",
     "crypto": "github:jspm/nodelibs-crypto@0.1.0",
+    "es6-shim": "npm:es6-shim@0.35.0",
     "http": "npm:@angular/http@2.0.0-rc.1",
     "reflect-metadata": "npm:reflect-metadata@0.1.3",
     "router": "npm:@angular/router@2.0.0-rc.1",
     "rxjs": "npm:rxjs@5.0.0-beta.6",
     "typescript": "npm:typescript@1.8.10",
+    "zone.js": "npm:zone.js@0.6.12",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -238,6 +236,9 @@ System.config({
       "hash.js": "npm:hash.js@1.0.3",
       "inherits": "npm:inherits@2.0.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.2"
+    },
+    "npm:es6-shim@0.35.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:evp_bytestokey@1.0.0": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
