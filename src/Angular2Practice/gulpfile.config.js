@@ -6,15 +6,11 @@ var GulpConfig = (function () {
         this.paths.web = { root: "./wwwroot" };
 
         this.paths.src = {
-            npm: "./node_modules",
-            app: "./app",
-            css: "./styles"
+            npm: "./node_modules"
         };
 
         this.paths.dest = {
-            app: this.paths.web.root + "/app",
-            lib: this.paths.web.root + "/lib",
-            css: this.paths.web.root + "/styles"
+            lib: this.paths.web.root + "/lib"
         };
     }
     return gulpConfig;

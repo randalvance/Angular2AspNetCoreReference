@@ -21,10 +21,8 @@
   <ItemGroup>
     <DnxInvisibleFolder Include="bower_components\" />
     <DnxInvisibleFolder Include="typings\" />
-    <DnxInvisibleFolder Include="wwwroot\app\" />
     <DnxInvisibleFolder Include="wwwroot\jspm_packages\" />
     <DnxInvisibleFolder Include="wwwroot\lib\" />
-    <DnxInvisibleFolder Include="wwwroot\styles\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.targets" Condition="'$(VSToolsPath)' != ''" />

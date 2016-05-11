@@ -5,10 +5,14 @@ The IDE used for this project is Visual Studio 2015.
 
 ## How to Build
 
-Run the following commands
+1. Go to `src/Angular2Practice/`
+1. Run the following commands
 ```
 npm install
 jspm install
-bower install
 typings install
+gulp build
+
+cd wwwroot
+tsc -w
 ```
