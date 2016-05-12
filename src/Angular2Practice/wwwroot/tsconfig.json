@@ -8,7 +8,7 @@
     "sourceMap": true
   },
   "exclude": [
-    "jspm_packages"
+    "lib"
   ],
   "compileOnSave": false
 }

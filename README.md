@@ -9,9 +9,8 @@ The IDE used for this project is Visual Studio 2015.
 1. Run the following commands
 ```
 npm install
-jspm install
 typings install
-gulp build
+gulp all
 
 cd wwwroot
 tsc -w

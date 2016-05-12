@@ -10,22 +10,28 @@
 
     <title>@ViewBag.Title</title>
 
-    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/es6-shim/es6-shim.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/reflect-metadata/Reflect.js"></script>
+    <script src="~/lib/zone.js/dist/zone.js"></script>
 
     <!-- Required for Bootstrap Tooltips -->
-    <script src="~/lib/tether/js/tether.js"></script>
-    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="~/lib/tether/dist/js/tether.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
 
     <!-- 2. Configure SystemJS -->
+
     <script src="~/jspm_packages/system.js"></script>
-    <script src="~/jspm.config.js"></script>
+    <script src="~/config.js"></script>
+
+    <script src="~/app/app.js"></script>
 
     <script>
         System.import('app').catch(function (err) { console.error(err); });
     </script>
 
-    <link rel="stylesheet" href="~/lib/tether/css/tether.css" />
-    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/lib/tether/dist/css/tether.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
 
     <link rel="stylesheet" href="~/styles/site.css" />
 </head>
