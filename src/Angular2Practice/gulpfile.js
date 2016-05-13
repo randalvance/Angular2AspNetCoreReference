@@ -28,7 +28,7 @@ gulp.task("all", function () {
 });
 
 gulp.task("build", function () {
-    builder.bundle("app/main.js", "wwwroot/app/app.js", { production: true });
+    builder.bundle("app/main.js", "wwwroot/app/app.js");
 });
 
 gulp.task("clean", function () {
