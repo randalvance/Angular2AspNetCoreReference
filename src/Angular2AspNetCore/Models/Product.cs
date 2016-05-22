@@ -1,4 +1,4 @@
-﻿namespace Angular2Practice.Models
+﻿namespace Angular2AspNetCore.Models
 {
     public class Product
     {

@@ -1,10 +1,9 @@
-﻿using Angular2Practice.Models;
-using Microsoft.AspNet.Mvc;
-using System.Collections;
+using Angular2AspNetCore.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Angular2Practice.Controllers
+namespace Angular2AspNetCore.Controllers
 {
     [Route("api/[controller]")]
     public class ProductController : Controller

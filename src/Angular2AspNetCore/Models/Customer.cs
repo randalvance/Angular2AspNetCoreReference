@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Angular2Practice.Models
+namespace Angular2AspNetCore.Models
 {
     public class Customer
     {

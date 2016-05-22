@@ -2,13 +2,12 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/src/Angular2Practice/node_modules
-/src/Angular2Practice/bower_components
-/src/Angular2Practice/typings
-/src/Angular2Practice/wwwroot/app/**/*.js
-/src/Angular2Practice/wwwroot/app/**/*.map
-/src/Angular2Practice/wwwroot/lib
-/src/Angular2Practice/wwwroot/jspm_packages
+/src/Angular2AspNetCore/node_modules
+/src/Angular2AspNetCore/bower_components
+/src/Angular2AspNetCore/typings
+/src/Angular2AspNetCore/wwwroot/app/**/*.js
+/src/Angular2AspNetCore/wwwroot/app/**/*.map
+/src/Angular2AspNetCore/wwwroot/lib
 
 
 ## Ignore Visual Studio temporary files, build results, and
