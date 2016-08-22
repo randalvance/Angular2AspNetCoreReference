@@ -8,6 +8,7 @@
 /src/Angular2AspNetCore/wwwroot/app/**/*.js
 /src/Angular2AspNetCore/wwwroot/app/**/*.map
 /src/Angular2AspNetCore/wwwroot/lib
+/src/Angular2AspNetCore/wwwroot/typings
 
 
 ## Ignore Visual Studio temporary files, build results, and
@@ -222,3 +223,4 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+

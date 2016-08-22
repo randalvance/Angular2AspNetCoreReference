@@ -3,7 +3,8 @@ import { Customer } from './customer';
 
 @Component({
     selector: 'customer-detail',
-    templateUrl: 'app/customer/customer.component.html'
+    templateUrl: 'customer.component.html',
+    moduleId: module.id
 })
 export class CustomerComponent {
     @Input() customer: Customer;

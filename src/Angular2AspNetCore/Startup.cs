@@ -53,7 +53,7 @@ namespace Angular2AspNetCore
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
 
-                //routes.MapSpaFallbackRoute("spa-fallback", new { controller = "Home", action = "Index" });
+                routes.MapSpaFallbackRoute("spa-fallback", new { controller = "Home", action = "Index" });
             });
         }
     }

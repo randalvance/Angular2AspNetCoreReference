@@ -8,8 +8,9 @@ import { Customer } from './customer';
 
 @Component({
     selector: 'customer-list',
-    templateUrl: 'app/customer/customer-list.component.html',
-    directives: [CustomerComponent]
+    templateUrl: 'customer-list.component.html',
+    directives: [CustomerComponent],
+    moduleId: module.id
 })
 export class CustomerListComponent implements OnInit {
     constructor(private _customerService: CustomerService) { }
