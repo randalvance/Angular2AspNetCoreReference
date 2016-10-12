@@ -8,10 +8,11 @@ import { CustomerModule } from './modules/customer/customer.module';
 import { HighlightDirective } from './directives/highlight';
 
 import { AppComponent }  from './app.component';
+import { WelcomeComponent } from './welcome.component';
 
 @NgModule({
     imports: [BrowserModule, routing, ProductModule, CustomerModule],
-    declarations: [AppComponent, HighlightDirective],
+    declarations: [AppComponent, WelcomeComponent, HighlightDirective],
     providers: [appRoutingProviders],
     bootstrap: [AppComponent]
 })

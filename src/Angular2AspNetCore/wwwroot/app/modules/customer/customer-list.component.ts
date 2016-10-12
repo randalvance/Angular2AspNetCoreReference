@@ -2,14 +2,12 @@
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
-import { CustomerComponent } from './customer.component';
 import { CustomerService } from './customer.service';
 import { Customer } from './customer';
 
 @Component({
     selector: 'customer-list',
     templateUrl: 'customer-list.component.html',
-    directives: [CustomerComponent],
     moduleId: module.id
 })
 export class CustomerListComponent implements OnInit {
