@@ -12,6 +12,7 @@ import { ProductService } from './product.service';
 })
 export class ProductListComponent implements OnInit {
     products: Observable<Product>;
+    filterBy: string; 
 
     constructor(
         private router: Router,

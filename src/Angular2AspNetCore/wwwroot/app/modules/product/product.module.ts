@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { ProductListComponent } from './product-list.component';
 import { ProductComponent } from './product.component';
 import { ProductService } from './product.service';
+import { ProductFilterPipe } from './product-filter.pipe';
 
 import { productRouting } from './product.routing';
 
@@ -18,7 +19,8 @@ import { productRouting } from './product.routing';
     ],
     declarations: [
         ProductListComponent,
-        ProductComponent
+        ProductComponent,
+        ProductFilterPipe
     ],
     providers: [ProductService]
 })

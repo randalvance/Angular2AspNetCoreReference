@@ -1,4 +1,8 @@
 ﻿<h3>Products</h3>
+<div class="form-group">
+    <label for="filter">Search</label>
+    <input type="text" class="form-control" id="search" [(ngModel)]="filterBy" />
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -9,7 +13,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let product of products | async">
+        <tr *ngFor="let product of products | async | productFilter:filterBy">
             <td>{{product.id}}</td>
             <td><a (click)="onSelect(product)">{{product.name}}</a></td>
             <td>{{product.description}}</td>
