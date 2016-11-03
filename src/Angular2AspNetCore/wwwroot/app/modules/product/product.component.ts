@@ -1,6 +1,6 @@
 ﻿import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 import { Product } from './product';
 import { ProductService } from './product.service';
 import { Subscription } from 'rxjs/Subscription';
@@ -16,6 +16,8 @@ export class ProductComponent implements OnInit, OnDestroy {
 
     private sub: Subscription;
 
+    private error: any;
+
     constructor(
         private route: ActivatedRoute,
         private router: Router,
@@ -24,7 +26,9 @@ export class ProductComponent implements OnInit, OnDestroy {
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
             let id = +params['id']; // (+) converts string 'id' to a number
-            this.productService.getProduct(id).subscribe(product => this.product = product);
+            this.productService.getProduct(id).subscribe(
+                product => this.product = product,
+                error => this.error = error);
         });
         // or if component will not be reused (ngOnDestroy not needed)
         /*

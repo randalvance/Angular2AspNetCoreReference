@@ -24,6 +24,6 @@ import { productRouting } from './product.routing';
         ProductComponent,
         ProductFilterPipe
     ],
-    providers: [ProductService]
+    providers: [ ProductService ]
 })
 export class ProductModule { }

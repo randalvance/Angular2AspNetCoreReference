@@ -1,6 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 import { Product } from './product';
 import { ProductService } from './product.service';
 
@@ -10,7 +10,7 @@ import { ProductService } from './product.service';
     moduleId: module.id
 })
 export class ProductListComponent implements OnInit {
-    products: Observable<Product>;
+    products: Observable<Product[]>;
     filterBy: string; 
 
     constructor(

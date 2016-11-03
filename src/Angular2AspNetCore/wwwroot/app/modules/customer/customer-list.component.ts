@@ -1,6 +1,6 @@
 ﻿import { Component, EventEmitter, Output, Inject, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 
 import { CustomerService } from './customer.service';
 import { Customer } from './customer';
