@@ -4,7 +4,6 @@ import { Observable } from 'rxjs/Rx';
 import { Product } from './product';
 import { ProductService } from './product.service';
 
-
 @Component({
     selector: 'product-list',
     templateUrl: 'product-list.component.html',
@@ -19,15 +18,14 @@ export class ProductListComponent implements OnInit {
         private productService: ProductService) { }
 
     ngOnInit() {
-        this.getProducts();
+        this.products = this.productService.getProducts();
     }
 
     onSelect(product: Product) {
         this.router.navigate(['/product', product.id]);
     }
 
-
-    getProducts() {
-        this.products = this.productService.getProducts();
+    onRatingClicked(payload: string) {
+        alert(payload);
     }
 }

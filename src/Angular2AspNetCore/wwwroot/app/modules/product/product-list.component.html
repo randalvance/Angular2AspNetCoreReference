@@ -10,6 +10,7 @@
             <th>Name</th>
             <th>Description</th>
             <th>In Stock</th>
+            <th>Rating</th>
         </tr>
     </thead>
     <tbody>
@@ -18,6 +19,7 @@
             <td><a (click)="onSelect(product)">{{product.name}}</a></td>
             <td>{{product.description}}</td>
             <td>{{product.stock}}</td>
+            <td><star-rating [rating]="product.rating" (ratingClicked)="onRatingClicked($event)"></star-rating></td>
         </tr>
     </tbody>
 </table>
