@@ -5,3 +5,7 @@
 .main-content  {
   padding: 3rem 1.5rem;
 }
+
+li.nav-item a.active {
+    font-weight: bold;
+}

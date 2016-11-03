@@ -9,10 +9,11 @@ import { HighlightDirective } from './directives/highlight';
 
 import { AppComponent }  from './app.component';
 import { WelcomeComponent } from './welcome.component';
+import { PageNotFoundComponent } from './pagenotfound.component';
 
 @NgModule({
     imports: [BrowserModule, routing, ProductModule, CustomerModule],
-    declarations: [AppComponent, WelcomeComponent, HighlightDirective],
+    declarations: [AppComponent, WelcomeComponent, PageNotFoundComponent, HighlightDirective],
     providers: [appRoutingProviders],
     bootstrap: [AppComponent]
 })
