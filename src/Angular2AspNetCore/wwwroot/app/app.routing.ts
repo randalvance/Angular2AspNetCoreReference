@@ -3,7 +3,8 @@ import { WelcomeComponent } from './welcome.component';
 import { PageNotFoundComponent } from './pagenotfound.component';
 
 const appRoutes: Routes = [
-    { path: '', component: WelcomeComponent },
+    { path: 'index', component: WelcomeComponent },
+    { path: '', redirectTo: 'index', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent }
 ];
 
