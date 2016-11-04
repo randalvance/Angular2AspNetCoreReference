@@ -11,6 +11,8 @@ import { ProductService } from './product.service';
 import { ProductFilterPipe } from './product-filter.pipe';
 import { productRouting } from './product.routing';
 
+import { ProductDetailGuard } from'./product-guard.service';
+
 @NgModule({
     imports: [
         FormsModule,
@@ -24,6 +26,6 @@ import { productRouting } from './product.routing';
         ProductComponent,
         ProductFilterPipe
     ],
-    providers: [ ProductService ]
+    providers: [ProductService, ProductDetailGuard]
 })
 export class ProductModule { }

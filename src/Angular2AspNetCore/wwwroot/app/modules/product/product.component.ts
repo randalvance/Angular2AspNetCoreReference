@@ -44,4 +44,8 @@ export class ProductComponent implements OnInit, OnDestroy {
     goToProducts() {
         this.router.navigate(['/products']);
     }
+
+    hasChanges() {
+        return true; // For now
+    }
 }
