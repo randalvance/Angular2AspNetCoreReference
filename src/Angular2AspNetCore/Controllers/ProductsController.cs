@@ -10,9 +10,9 @@ namespace Angular2AspNetCore.Controllers
     {
         private IEnumerable<Product> products = new List<Product>
             {
-                new Product { Id = 1, Name = "Zap!", Description = "Restore Surfaces Like a Professional", Stock = 10, Rating = 3.5 },
-                new Product { Id = 2, Name = "Rodent Sheriff", Description = "Natural Way to Repel Pests", Stock = 5, Rating = 2 },
-                new Product { Id = 3, Name = "Magic Mesh", Description = "Magnetic Screen Door Cover", Stock = 1, Rating = 5 }
+                new Product { Id = 1, Name = "Zap!", Description = "Restore Surfaces Like a Professional", Stock = 10, Rating = 3.5, ProductType = "Limited Edition" },
+                new Product { Id = 2, Name = "Rodent Sheriff", Description = "Natural Way to Repel Pests", Stock = 5, Rating = 2, ProductType = "Regular" },
+                new Product { Id = 3, Name = "Magic Mesh", Description = "Magnetic Screen Door Cover", Stock = 1, Rating = 5, ProductType = "Seasonal" }
             };
 
         [HttpGet]

@@ -16,8 +16,19 @@
                 <label class="control-label" for="stockText">In Stock</label>
                 <input type="text" class="form-control" id="stockText" name="stock" [(ngModel)]="product.stock" />
             </fieldset>
+            <fieldset class="form-group" [class.has-error]="hasProductTypeError">
+                <label class="control-label" for="productType">Primary Language</label>
+                <select class="form-control" #productType name="productType" [(ngModel)]="product.productType"
+                        (blur)="validateProductType(productType.value)"
+                        (change)="validateProductType(productType.value)">
+                    <option value="default">Select a Language...</option>
+                    <option *ngFor="let productType of productTypes">
+                        {{productType}}
+                    </option>
+                </select>
+            </fieldset>
 
-            <button type="button" class="btn btn-primary" (click)="goToProducts()">OK</button>
+            <button type="button" class="btn btn-primary" (click)="goToProducts()" [disabled]="form.invalid">OK</button>
         </form>
 
     </div>

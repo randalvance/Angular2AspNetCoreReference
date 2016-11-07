@@ -13,6 +13,8 @@ import { Subscription } from 'rxjs/Subscription';
 export class ProductComponent implements OnInit, OnDestroy {
 
     product: Product;
+    productTypes: string[];
+    hasProductTypeError: boolean;
 
     private sub: Subscription;
 
@@ -35,6 +37,9 @@ export class ProductComponent implements OnInit, OnDestroy {
             let id = +this.route.snapshot.params['id'];
             this.productService.getProduct(id).subscribe(product => this.product = product);
         */
+
+        this.productTypes = ['Regular', 'Limited Edition', 'Seasonal'];
+        this.hasProductTypeError = false;
     }
 
     ngOnDestroy() {
@@ -47,5 +52,9 @@ export class ProductComponent implements OnInit, OnDestroy {
 
     hasChanges() {
         return true; // For now
+    }
+
+    validateProductType(productTypeToValidate) {
+        this.hasProductTypeError = productTypeToValidate === 'default';
     }
 }
