@@ -1,20 +1,24 @@
 ﻿<div id="holder">
-    <div *ngIf="product">
+    <div *ngIf="product" class="container">
         <h3>Product Details for {{product.name}}</h3>
 
-        <fieldset class="form-group">
-            <label for="nameText">Product Name</label>
-            <input type="text" class="form-control" id="nameText" [(ngModel)]="product.name" />
-        </fieldset>
-        <fieldset class="form-group">
-            <label for="descriptionText">Description</label>
-            <textarea class="form-control" id="descriptionText" rows="3" [(ngModel)]="product.description"></textarea>
-        </fieldset>
-        <fieldset class="form-group">
-            <label for="stockText">In Stock</label>
-            <input type="text" class="form-control" id="stockText" [(ngModel)]="product.stock" />
-        </fieldset>
+        <form #form="ngForm" novalidate>
+            <fieldset class="form-group" [class.has-error]="firstName.invalid && firstName.dirty">
+                <label class="control-label" for="nameText">Product Name</label>
+                <input type="text" #firstName="ngModel" class="form-control" id="nameText" name="name" required [(ngModel)]="product.name" />
+                <div *ngIf="firstName.invalid && firstName.dirty" class="alert alert-danger">Name is required.</div>
+            </fieldset>
+            <fieldset class="form-group">
+                <label class="control-label" for="descriptionText">Description</label>
+                <textarea class="form-control" id="descriptionText" name="description" rows="3" [(ngModel)]="product.description"></textarea>
+            </fieldset>
+            <fieldset class="form-group">
+                <label class="control-label" for="stockText">In Stock</label>
+                <input type="text" class="form-control" id="stockText" name="stock" [(ngModel)]="product.stock" />
+            </fieldset>
 
-        <button type="button" class="btn btn-primary" (click)="goToProducts()">OK</button>
+            <button type="button" class="btn btn-primary" (click)="goToProducts()">OK</button>
+        </form>
+
     </div>
 </div>
